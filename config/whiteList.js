@@ -1,4 +1,4 @@
-const allowedOrigins = ["http://localhost:3000, https://secret-ly.netlify.app"];
+const allowedOrigins = ["http://localhost:3000", "https://secret-ly.netlify.app"];
 
 const corsOption = {
   origin: function (origin, callback) {
