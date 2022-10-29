@@ -20,7 +20,7 @@ const loginController = async (req, res) => {
   foundUser.refreshToken = refreshToken;
   await foundUser.save();
 
-  res.cookie("jwt", refreshToken, { httpOnly: true, secure: true, sameSite: "none", domain: "secret-ly.netlify.app", maxAge: 24 * 60 * 60 * 1000 });
+  res.cookie("jwt", refreshToken, { httpOnly: true, secure: true, sameSite: "None", domain: "secret-ly.netlify.app", maxAge: 24 * 60 * 60 * 1000 });
   res.status(200).json({ token: accessToken, userId: foundUser._id.toString() });
 };
 
